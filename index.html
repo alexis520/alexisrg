@@ -95,13 +95,13 @@
   myName='leo'
   led_state=true
   function doAction(msg) {
-    n=msg.split(":")[0];
-	f=msg.split(":")[1];
-	v=msg.split(":")[2]
-	boarId=document.getElementById("boarId").value;
-	userId=document.getElementById("userId").value;
-	if(boarId+userId==n){
-		switch(f) {
+    //n=msg.split(":")[0];
+	//f=msg.split(":")[1];
+	//v=msg.split(":")[2]
+	//boarId=document.getElementById("boarId").value;
+	//userId=document.getElementById("userId").value;
+	//if(boarId+userId==n){
+		switch(msg) {
 		  case 'led_state':
 			led_state=v;
 			document.getElementById("led_state").innerHTML=led_state;
@@ -114,7 +114,7 @@
 		  default:
 			// code block
 		}
-	   }
+	   //}
 	 }
   
 </script>
