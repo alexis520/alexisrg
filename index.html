@@ -87,17 +87,17 @@
   }
 
     // called when a message arrives
-  function led() {
+    function led() {
     //boarId=document.getElementById("boarId").value;
 	//userIdId=document.getElementById("userId").value;
     sendMessage('led')
   }
-  function led2() {
+    function led2() {
     //boarId=document.getElementById("boarId").value;
 	//userIdId=document.getElementById("userId").value;
     sendMessage('led2')
   }
-  function led3() {
+	function led3() {
     //boarId=document.getElementById("boarId").value;
 	//userIdId=document.getElementById("userId").value;
     sendMessage('led3')
@@ -120,6 +120,7 @@
 		//ledstate.innerHTML='on';
 		localStorage.led_state='on';
 		document.getElementById('led_state').innerHTML=localStorage.led_state;
+			if location.reload();{document.getElementById('led_state').innerHTML=localStorage.led_state;}
 		
 		}else{
 			//ledstate.innerHTML='off';
@@ -173,4 +174,3 @@
 </script>
 	</body>
 </html>
-
