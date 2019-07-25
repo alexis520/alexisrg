@@ -70,23 +70,6 @@
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-
-	val_sen=document.getElementById("sensor_val");
-	ledstate=document.getElementById("led_state");
-	
-	n=message.payloadString.split(':')[0];
-	m=message.payloadString.split(':')[1];
-	if(n=='led'){
-		if(m=='on'){
-		ledstate.innerHTML='on';
-		}else{
-			ledstate.innerHTML='off';
-		}
-	}else{
-		val_sen.innerHTML=message.payloadString;
-	}
-	
-	
 	
 	doAction(message.payloadString);
   }
@@ -109,25 +92,41 @@
   //myName='leo'
   //led_state=true
   function doAction(msg) {
+ 
+  	val_sen=document.getElementById("sensor_val");
+	ledstate=document.getElementById("led_state");
+	
+	n=msg.split(':')[0];
+	m=msg.split(':')[1];
+	if(n=='led'){
+		if(m=='on'){
+		ledstate.innerHTML='on';
+		}else{
+			ledstate.innerHTML='off';
+		}
+	}else{
+		val_sen.innerHTML=msg;
+	}
+	
     //n=msg.split(":")[0];
 	//f=msg.split(":")[1];
 	//v=msg.split(":")[2]
 	//boarId=document.getElementById("boarId").value;
 	//userId=document.getElementById("userId").value;
 	//if(boarId+userId==n){
-		switch(msg) {
-		  case 'led_state':
-			led_state=msg;
-			document.getElementById("led_state").innerHTML=led_state;
-		   break;
-		   case 'sensor_val':
-			sensor_val=msg;
-			document.getElementById("sensor_val").innerHTML=sensor_val;
+		///switch(msg) {
+		  //case 'led_state':
+		//	led_state=msg;
+		//	document.getElementById("led_state").innerHTML=led_state;
+		 //  break;
+		 //  case 'sensor_val':
+		//	sensor_val=msg;
+			//document.getElementById("sensor_val").innerHTML=sensor_val;
 			// code block
-		    break;
+		    //break;
 		//  default:
 			// code block
-		}
+		//}
 	   //}
 	 }
   
