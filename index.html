@@ -101,17 +101,17 @@
 	//boarId=document.getElementById("boarId").value;
 	//userId=document.getElementById("userId").value;
 	//if(boarId+userId==n){
-		switch(msg) {
-		  case 'led_state':
-			led_state=v;
+		//switch(msg) {
+		  if msg=='led_state'{
+		  led_state="led_state_on"
 			document.getElementById("led_state").innerHTML=led_state;
-			break;
-		  case 'sensor_val':
+		   }
+		  if msg=='sensor_val'{
 			sensor_val=v;
 			document.getElementById("sensor_val").innerHTML=sensor_val;
 			// code block
-			break;
-		  default:
+		    }
+		//  default:
 			// code block
 		}
 	   //}
