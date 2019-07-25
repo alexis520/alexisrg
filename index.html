@@ -74,8 +74,8 @@
 	val_sen=document.getElementById("sensor_val");
 	ledstate=document.getElementById("led_state");
 	
-	n=message.payloadString[0];
-	m=message.payloadString[1];
+	n=message.payloadString.split[0];
+	m=message.payloadString.split[1];
 	if(n=='led'){
 		if(m=='on'){
 		ledstate.innerHTML='on';
