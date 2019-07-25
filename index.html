@@ -103,11 +103,11 @@
 	//if(boarId+userId==n){
 		switch(msg) {
 		  case 'led_state':
-			led_state=v;
+			led_state=msg;
 			document.getElementById("led_state").innerHTML=led_state;
 		   break;
-		   case msg=='sensor_val':
-			sensor_val=v;
+		   case 'sensor_val':
+			sensor_val=msg;
 			document.getElementById("sensor_val").innerHTML=sensor_val;
 			// code block
 		    break;
