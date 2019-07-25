@@ -92,8 +92,8 @@
     sendMessage('led')
   }
   // called when a message arrives
-  myName='leo'
-  led_state=true
+  //myName='leo'
+  //led_state=true
   function doAction(msg) {
     //n=msg.split(":")[0];
 	//f=msg.split(":")[1];
@@ -103,7 +103,7 @@
 	//if(boarId+userId==n){
 		switch(msg) {
 		  case 'led_state':
-			led_state="led_state_on"
+			led_state=v;
 			document.getElementById("led_state").innerHTML=led_state;
 		   break;
 		   case msg=='sensor_val':
