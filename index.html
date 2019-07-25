@@ -12,7 +12,7 @@
 		<textarea style="resize:none" id='userId' rows="1" cols="10">User</textarea>
 		<textarea  style="resize:none" id='boarId' rows="1" cols="10">rp</textarea><br/>
 		<button id="led" onclick="led()">led</button>
-		<h1 id="led_state">led_state</h1>
+		<h1 id="led_state">off</h1>
 		<button id="led2" onclick="led2()">led2</button>
 		<h1 id="led_state2">off</h1>
 		<button id="led3" onclick="led3()">led3</button>
@@ -72,10 +72,44 @@
   }
 
   // called when a message arrives
-  function onMessageArrived(message) {
+  function onMessageArrived(message,msg) {
     console.log("onMessageArrived:"+message.payloadString);
 	
 	doAction(message.payloadString);
+	
+	val_sen=document.getElementById("sensor_val");
+	ledstate=document.getElementById("led_state");
+	ledstate2=document.getElementById("led_state2");
+	ledstate3=document.getElementById("led_state3");
+	
+	n=msg.split(':')[0];
+	m=msg.split(':')[1];
+	if(n=='led'){
+		if(m=='on'){
+		localStorage.led_state='on';
+		document.getElementById("led_state").innerHTML=localStorage.led_state;
+		
+		}else{
+			localStorage.led_state='off';
+			document.getElementById("led_state").innerHTML=localStorage.led_state;
+		}
+	}else if(n=='led2'){
+		if(m=='on'){
+		localStorage.led_state2='on';
+		document.getElementById("led_state2").innerHTML=localStorage.led_state2;
+		}else{
+			localStorage.led_state2='off';
+			document.getElementById("led_state2").innerHTML=localStorage.led_state2;
+		}
+	}else if(n=='led3'){
+		if(m=='on'){
+		localStorage.led_state3='on';
+		document.getElementById("led_state3").innerHTML=localStorage.led_state3;
+		}else{
+			localStorage.led_state3='off;
+			document.getElementById("led_state3").innerHTML=localStorage.led_state3;
+		}
+	}else{val_sen.innerHTML=msg;}
   }
   
     // called when a message arrives
@@ -160,4 +194,3 @@
 </script>
 	</body>
 </html>
-
