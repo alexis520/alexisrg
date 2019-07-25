@@ -110,6 +110,8 @@
  
   	val_sen=document.getElementById("sensor_val");
 	ledstate=document.getElementById("led_state");
+	ledstate2=document.getElementById("led_state2");
+	ledstate3=document.getElementById("led_state3");
 	
 	n=msg.split(':')[0];
 	m=msg.split(':')[1];
@@ -121,15 +123,15 @@
 		}
 	}else if(n=='led2'){
 		if(m=='on'){
-		ledstate.innerHTML='on';
+		ledstate2.innerHTML='on';
 		}else{
-			ledstate.innerHTML='off';
+			ledstate2.innerHTML='off';
 		}
 	}else if(n=='led3'){
 		if(m=='on'){
-		ledstate.innerHTML='on';
+		ledstate3.innerHTML='on';
 		}else{
-			ledstate.innerHTML='off';
+			ledstate3.innerHTML='off';
 		}
 	}else{val_sen.innerHTML=msg;}
 	
