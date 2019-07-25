@@ -119,9 +119,19 @@
 		}else{
 			ledstate.innerHTML='off';
 		}
-	}else{
-		val_sen.innerHTML=msg;
-	}
+	}else if(n=='led2'){
+		if(m=='on'){
+		ledstate.innerHTML='on';
+		}else{
+			ledstate.innerHTML='off';
+		}
+	}else if(n=='led3'){
+		if(m=='on'){
+		ledstate.innerHTML='on';
+		}else{
+			ledstate.innerHTML='off';
+		}
+	}else{val_sen.innerHTML=msg;}
 	
     //n=msg.split(":")[0];
 	//f=msg.split(":")[1];
@@ -148,3 +158,4 @@
 </script>
 	</body>
 </html>
+
