@@ -70,9 +70,23 @@
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-	
+
 	val_sen=document.getElementById("sensor_val");
-	val_sen.innerHTML=message.payloadString;
+	ledstate=document.getElementById("led_state");
+	
+	n=message.payloadString[0];
+	m=message.payloadString[1];
+	if(n=='led'){
+		if(m=='on'){
+		ledstate.innerHTML='on';
+		}else{
+			ledstate.innerHTML='off';
+		}
+	}else{
+		val_sen.innerHTML=message.payloadString;
+	}
+	
+	
 	
 	doAction(message.payloadString);
   }
