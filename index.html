@@ -4,7 +4,7 @@
 	    <title>MQTT JavaScript Client Example</title>
 	    <!-- Latest compiled and minified CSS - add here as needed -->
 	</head>
-	<body onload="doAction()">
+	<body onload="valor()">
 	    <!-- HTML to display MQTT topic values ------------------------------------------------->
 		<div><strong>IOT Server</strong></div><br>
 		<textarea style="resize:none; border: none" readonly rows="1" cols="10">User Id</textarea>
@@ -106,6 +106,16 @@
   // called when a message arrives
   //myName='leo'
   //led_state=true
+  function valor(){
+  
+  ledstate.innerHTML=localStorage.led_state;
+  ledstate2.innerHTML=localStorage.led_state2;
+  ledstate3.innerHTML=localStorage.led_state3;
+  
+  }
+  
+  
+  
   function doAction(msg) {
  
   	val_sen=document.getElementById("sensor_val");
