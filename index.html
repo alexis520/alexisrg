@@ -120,31 +120,36 @@
 		//ledstate.innerHTML='on';
 		localStorage.led_state='led:on';
 		document.getElementById('led_state').innerHTML=localStorage.led_state;
-			
+		ledstate.innerHTML=localStorage.led_state;	
 		}else{
 			//ledstate.innerHTML='off';
 			localStorage.led_state='led:off';
 			document.getElementById('led_state').innerHTML=localStorage.led_state;
+			ledstate.innerHTML=localStorage.led_state;	
 		}
 	}else if(n=='led2'){
 		if(m=='on'){
 		//ledstate2.innerHTML='on';
 		localStorage.led_state2='led2:on';
 		document.getElementById('led_state2').innerHTML=localStorage.led_state2;
+		ledstate2.innerHTML=localStorage.led_state2;	
 		}else{
 			//ledstate2.innerHTML='off';
 			localStorage.led_state2='led2:off';
 			document.getElementById('led_state2').innerHTML=localStorage.led_state2;
+			ledstate2.innerHTML=localStorage.led_state2;	
 		}
 	}else if(n=='led3'){
 		if(m=='on'){
 		//ledstate3.innerHTML='on';
 		localStorage.led_state3='led3:on';
 		document.getElementById('led_state3').innerHTML=localStorage.led_state3;
+		ledstate3.innerHTML=localStorage.led_state3;	
 		}else{
 			//ledstate3.innerHTML='off';
 			localStorage.led_state3='led3:off';
 		    document.getElementById('led_state3').innerHTML=localStorage.led_state3;
+			ledstate3.innerHTML=localStorage.led_state3;	
 		}
 	}else{val_sen.innerHTML=msg;}
 	
